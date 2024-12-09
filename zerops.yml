@@ -1,7 +1,10 @@
 zerops:
   - setup: api
     build:
+      os: ubuntu
       base: python@3.12
+      buildCommands:
+        - apt-get update -y
       deploy:
         - app.py
       addToRunPrepare:
